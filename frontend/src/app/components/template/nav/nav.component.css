@@ -8,6 +8,15 @@
     color: #FFF;
 }
 
+.sidenav a img {
+    width: 50px;
+}
+
+.sidenav .icon-menu {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
 .sidenav i {
     padding-right: 10px;
 }
