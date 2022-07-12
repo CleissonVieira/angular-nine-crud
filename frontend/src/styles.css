@@ -1,12 +1,200 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: rgb(249, 250, 251,1);
+}
 
 .red {
     color: rgb(227, 94, 107);
 }
 
-.v-middle {
+/* Alinhamento */
+.v-item-top {
+    vertical-align: top;
+}
+
+.v-item-middle {
     vertical-align: middle;
 }
+
+.v-item-top {
+    vertical-align: top;
+}
+/* final Alinhamento */
+
+
+/* Tipografia */
+.q-font-sizeH1 {
+    font-family: Roboto; 
+    font-weight: 400;
+    font-size: 1.25rem; /* 20px */
+    line-height: 100%;
+}
+
+.q-font-sizeH2 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 100%;
+}
+
+.q-font-sizeH3 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 1rem; /* 16px */
+    line-height: 100%;
+}
+
+.q-font-sizeH4 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    line-height: 100%;
+}
+
+.q-font-sizeH5 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 0.75rem; /* 12px */
+    line-height: 100%;
+}
+
+.q-font-sizeH6 {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 0.625rem; /* 10px */
+    line-height: 100%;
+}
+/* final Tipografia */
+
+
+/* Display para icone */
+.q-iconDisplay1 {
+    font-family: Ia-solid-900;
+    font-weight: 900;
+    size: 3rem; /* 48px */
+    line-height: 100%;
+}
+
+.q-iconDisplay2 {
+    font-family: Ia-solid-900;
+    font-weight: 900;
+    size: 2rem; /* 32px */
+    line-height: 100%;
+}
+
+.q-iconDisplay3 {
+    font-family: Ia-solid-900;
+    font-weight: 900;
+    size: 1.5rem; /* 24px */
+    line-height: 100%;
+}
+
+.q-iconDisplay4 {
+    font-family: Ia-solid-900;
+    font-weight: 900;
+    size: 1.25rem; /* 20px */
+    line-height: 100%;
+}
+
+.q-iconDisplay5 {
+    font-family: Ia-solid-900;
+    font-weight: 900;
+    size: 1rem; /* 16px */
+    line-height: 100%;
+}
+/* final Display para icone */
+
+
+/* Cores */
+.q-color-primary {
+    color: rgb(233, 81, 29, 1);
+}
+
+.q-color-primaryHover {
+    color: rgb(255, 131, 75, 1);
+}
+
+.q-color-black {
+    color: rgb(30, 30, 36, 1);
+}
+
+.q-color-bodyBackground {
+    color: rgb(249, 250, 251,1);
+}
+
+.q-color-white {
+    color: rgb(255, 255, 255, 1);
+}
+
+.q-color-gray100 {
+    color: rgb(248, 248, 248, 1);
+}
+
+.q-color-gray200 {
+    color: rgb(224, 224, 224, 1);
+}
+
+.q-color-gray300 {
+    color: rgb(171, 171, 171, 1);
+}
+
+.q-color-gray400 {
+    color: rgb(119, 119, 119, 1);
+}
+
+.q-color-gray500 {
+    color: rgb(102, 102, 102, 1);
+}
+
+.q-color-gray600 {
+    color: rgb(85, 85, 85, 1);
+}
+
+.q-color-gray700 {
+    color: rgb(68, 68, 68, 1);
+}
+
+.q-color-gray800 {
+    color: rgb(66, 66, 72, 1);
+}
+
+.q-color-gray900 {
+    color: rgb(30, 30, 36, 1);
+}
+
+.q-color-danger {
+    color: rgb(219, 40, 40, 1);
+}
+
+.q-color-dangerLight {
+    color: rgb(251, 201, 201, 1);
+}
+
+.q-color-info {
+    color: rgb(79, 123, 234, 1);
+}
+
+.q-color-infoLight {
+    color: rgb(209, 224, 237, 1);
+}
+
+.q-color-success {
+    color: rgb(40, 129, 41, 1);
+}
+
+.q-color-successLight {
+    color: rgb(209, 242, 209, 1);
+}
+
+.q-color-warning {
+    color: rgb(251, 189, 8, 1);
+}
+
+.q-color-warningLight {
+    color: rgb(255, 234, 172, 1);
+}
+/* final Cores */
