@@ -2,18 +2,27 @@
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" >
         <mat-nav-list class="nav-list">
             <a mat-list-item class="icon-menu">
-                <img class="icon-size50 q-color-primary" src="../../../../assets/icons-menu/menu.svg" alt="">
+                <img class="icon-size56 q-color-primary" src="../../../../assets/icons-menu/menu.svg" alt="">
             </a>
-            <a mat-list-item routerLink="">
-                <img class="icon-size50" src="../../../../assets/icons-menu/favoritado.svg" alt="">
+            <a mat-list-item routerLink="/">
+                <img class="modulos" src="../../../../assets/icons-menu/PaginaInicial.svg" alt="">
             </a>
-            <a mat-list-item routerLink="/products">
-                <img class="icon-size50" src="../../../../assets/icons-menu/configuracao.svg" alt="">
+            <a mat-list-item routerLink="/modulos">
+                <img class="modulos" src="../../../../assets/icons-menu/Modulos.svg" alt="">
+            </a>
+            <a mat-list-item routerLink="/modulos/gerenciador-de-empresas">
+                <img class="modulos" src="../../../../assets/icons-module/icon-gem.svg" alt="">
+            </a>
+            <a mat-list-item routerLink="/modulos/folha-de-pagamento">
+                <img class="modulos" src="../../../../assets/icons-module/icon-fpa.svg" alt="">
+            </a>
+            <a mat-list-item routerLink="/modulos/area-de-trabalho">
+                <img class="modulos" src="../../../../assets/illustrations-desktop/Admissoes.png" alt="">
             </a>
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content class="content q-bgColor ">
+    <mat-sidenav-content class="content q-bgColor">
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
