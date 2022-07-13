@@ -4,14 +4,35 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
-    background-color: rgb(249, 250, 251,1);
+    background-color: rgba(63, 63, 68, 0.05);
 }
 
 .red {
     color: rgb(227, 94, 107);
 }
 
+.marginR-10 {
+    margin-right: 10px;
+}
+
+/* Tamanhos de icone */
+.icon-size24 {
+    width: 24px;
+}
+
+.icon-size50 {
+    width: 50px;
+}
+/* Tamanhos de icone */
+
+
 /* Alinhamento */
+.position-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .v-item-top {
     vertical-align: top;
 }
@@ -126,6 +147,10 @@ body {
     background-color: rgb(255, 131, 75, 1);
 }
 
+.q-bgColor {
+    background-color: rgba(63,63,68,0.05);
+}
+
 .q-color-black {
     color: rgb(30, 30, 36, 1);
 }
@@ -204,14 +229,6 @@ body {
 
 .q-bgColor-gray800 {
     background-color: rgb(66, 66, 72, 1);
-}
-
-.q-color-gray900 {
-    color: rgb(30, 30, 36, 1);
-}
-
-.q-bgColor-gray900 {
-    background-color: rgb(30, 30, 36, 1);
 }
 
 .q-color-danger {

@@ -1,15 +1,9 @@
 .sidenav {
-    position: 65px;
-    opacity: 100%;
     width: 56px;
 }
 
 .sidenav a {
     color: #FFF;
-}
-
-.sidenav a img {
-    width: 50px;
 }
 
 .sidenav .icon-menu {
@@ -23,5 +17,4 @@
 
 .content {
     padding: 16px;
-    background-color: #FFF;
 }

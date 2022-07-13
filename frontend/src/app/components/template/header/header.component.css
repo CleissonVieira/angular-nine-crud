@@ -1,8 +1,5 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 300;
+    height: 48px;
 }
 
 .header a {
@@ -12,15 +9,18 @@
 }
 
 .header a .logo {
-    max-width: 150px;
+    width: 89px;
+    height: 18px;
     margin-left: 65px;
-    margin-bottom: 7px;
 }
 
-.header .title-group {
+.header .icon-group {
+    display: flex;
     padding-left: 25px;
 }
 
-.header .title-group a img {
-    width: 30px;
+.header .icon-home {
+    margin-left: 48px;
+    margin-right: 15px;
+    font-weight: 500;
 }
