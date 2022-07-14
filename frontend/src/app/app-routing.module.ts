@@ -5,7 +5,8 @@ import { HomeComponent } from './views/home/home.component'
 import { ModulesComponent } from './views/modules/modules.component'
 import { ModuleBusinessManagerComponent } from './views/module-business-manager/module-business-manager.component'
 import { ModulePayrollComponent } from './views/module-payroll/module-payroll.component'
-import { ModuleWorkspaceComponent } from './views/module-workspace/module-workspace.component'
+
+import { HelpPageComponent } from './views/help-page/help-page.component'
 
 const routes: Routes = [
   {
@@ -25,9 +26,9 @@ const routes: Routes = [
     component: ModulePayrollComponent
   },
   {
-    path: "modulos/area-de-trabalho",
-    component: ModuleWorkspaceComponent
-  }
+    path: "help-page",
+    component: HelpPageComponent
+  },
 ];
 
 @NgModule({

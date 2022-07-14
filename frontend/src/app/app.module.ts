@@ -9,6 +9,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatBadgeModule } from '@angular/material/badge'
+import { MatExpansionModule } from '@angular/material/expansion'
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -17,7 +19,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ModulesComponent } from './views/modules/modules.component';
 import { ModuleBusinessManagerComponent } from './views/module-business-manager/module-business-manager.component';
 import { ModulePayrollComponent } from './views/module-payroll/module-payroll.component';
-import { ModuleWorkspaceComponent } from './views/module-workspace/module-workspace.component';
+import { HelpPageComponent } from './views/help-page/help-page.component';
  
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { ModuleWorkspaceComponent } from './views/module-workspace/module-worksp
     ModulesComponent,
     ModuleBusinessManagerComponent,
     ModulePayrollComponent,
-    ModuleWorkspaceComponent
+    HelpPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,8 @@ import { ModuleWorkspaceComponent } from './views/module-workspace/module-worksp
     MatSidenavModule,
     MatListModule,
     MatCardModule,
+    MatBadgeModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
