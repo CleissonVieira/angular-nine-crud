@@ -27,11 +27,6 @@ body {
 .icon-size56 {
     width: 56px;
 }
-
-.modulos {
-    width: 25px;
-}
-
 /* Tamanhos de icone */
 
 
@@ -58,83 +53,61 @@ body {
 
 /* Tipografia */
 .q-font-sizeH1 {
-    font-family: Roboto; 
     font-weight: 400;
     font-size: 1.25rem; /* 20px */
-    line-height: 100%;
 }
 
 .q-font-sizeH2 {
-    font-family: Roboto;
     font-weight: 400;
     font-size: 1.125rem; /* 18px */
-    line-height: 100%;
 }
 
 .q-font-sizeH3 {
-    font-family: Roboto;
     font-weight: 400;
     font-size: 1rem; /* 16px */
-    line-height: 100%;
 }
 
 .q-font-sizeH4 {
-    font-family: Roboto;
     font-weight: 400;
     font-size: 0.875rem; /* 14px */
-    line-height: 100%;
 }
 
 .q-font-sizeH5 {
-    font-family: Roboto;
     font-weight: 400;
     font-size: 0.75rem; /* 12px */
-    line-height: 100%;
 }
 
 .q-font-sizeH6 {
-    font-family: Roboto;
     font-weight: 400;
     font-size: 0.625rem; /* 10px */
-    line-height: 100%;
 }
 /* final Tipografia */
 
 
 /* Display para icone */
 .q-iconDisplay1 {
-    font-family: Ia-solid-900;
     font-weight: 900;
-    size: 3rem; /* 48px */
-    line-height: 100%;
+    width: 48px; /* 3rem */
 }
 
 .q-iconDisplay2 {
-    font-family: Ia-solid-900;
     font-weight: 900;
-    size: 2rem; /* 32px */
-    line-height: 100%;
+    width: 32px; /* 2rem */
 }
 
 .q-iconDisplay3 {
-    font-family: Ia-solid-900;
     font-weight: 900;
-    size: 1.5rem; /* 24px */
-    line-height: 100%;
+    width: 24px; /* 1.5rem */
 }
 
 .q-iconDisplay4 {
-    font-family: Ia-solid-900;
     font-weight: 900;
-    size: 1.25rem; /* 20px */
-    line-height: 100%;
+    width: 20px; /* 1.25rem */
 }
 
 .q-iconDisplay5 {
-    font-family: Ia-solid-900;
     font-weight: 900;
-    size: 1rem; /* 16px */
-    line-height: 100%;
+    width: 16px; /* 1rem */
 }
 /* final Display para icone */
 

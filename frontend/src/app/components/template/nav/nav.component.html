@@ -1,53 +1,23 @@
 <mat-sidenav-container class="q-color-black">
-    <mat-sidenav #drawer class="sidenav" mode="side" opened fixedInViewport="true" _content="">
+    <mat-sidenav #drawer [ngClass]="{'sidenav-sidenavOpen': sidnavOpen}" mode="side" opened fixedInViewport="true">
         <mat-nav-list>
-            <span>
-                <a mat-list-item>
-                    <img class="icon-menu q-color-primary" src="../../../../assets/icons-menu/menu.svg" alt="">
+            <span class="menu-open">
+                <a mat-list-item (click)="sidnavOpen = !sidnavOpen">
+                    <img class="q-iconDisplay3 q-color-primary" src="../../../../assets/icons-menu/menu.svg" alt="">
                 </a>
             </span>
 
-            <span>
-                <a mat-list-item routerLink="/">
-                    <img class="icons-sidnav" src="../../../../assets/icons-menu/PaginaInicial.svg" alt="">
-                </a>
-                <a *ngIf="showFiller" class="q-font-sizeH5 marginL-10">
-                    Página Inicial
-                </a>
-            </span>
-            
-            <span>
-                <a mat-list-item routerLink="/modulos">
-                    <img class="icons-sidnav" src="../../../../assets/icons-menu/Modulos.svg" alt="">
-                </a>
-                <a *ngIf="showFiller" class="q-font-sizeH5 marginL-10">
-                    Módulos
-                </a>
-            </span>
-
-            <span>
-                <a mat-list-item routerLink="/modulos/gerenciador-de-empresas">
-                    <img class="icons-sidnav" src="../../../../assets/icons-module/icon-gem.svg" alt="">
-                </a>
-                <a *ngIf="showFiller" class="q-font-sizeH5 marginL-10">
-                    Módulo Gerenciador de Empresas
-                </a>
-            </span>
-
-            <span>
-                <a mat-list-item routerLink="/modulos/folha-de-pagamento">
-                    <img class="icons-sidnav" src="../../../../assets/icons-module/icon-fpa.svg" alt="">
-                </a>
-                <a *ngIf="showFiller" class="q-font-sizeH5 marginL-10">
-                    Módulo Folha de Pagamento
+            <span *ngFor="let item of list" class="list-items">
+                <a mat-list-item routerLink="{{item.route}}">
+                    <img class="q-iconDisplay3 list-icons" src="{{item.srcImgIcon}}" alt="">
+                    <span class="list-label">{{ item.label }}</span>
+                    <img class="q-iconDisplay3 list-icons" src="../../../../assets/icons-nav/Proximo.svg" alt="">
                 </a>
             </span>
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content class="content q-bgColor">
+    <mat-sidenav-content [ngClass]="{'content-sidenavOpen': !sidnavOpen}" class="q-bgColor">
         <router-outlet></router-outlet>
-        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-        <button (click)="showFiller = !showFiller" mat-raised-button>Toggle extra text</button>
     </mat-sidenav-content>
 </mat-sidenav-container>

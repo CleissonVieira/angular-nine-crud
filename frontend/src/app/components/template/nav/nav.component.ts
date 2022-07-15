@@ -1,5 +1,5 @@
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { navbarData } from './nav-data'
 
 @Component({
   selector: 'app-nav',
@@ -7,15 +7,9 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  constructor() {}
+  ngOnInit(): void {}
 
-  constructor() {
-
-  }
-
-  ngOnInit(): void {
-
-  }
-
-  showFiller = false;
-  
+  list = navbarData;
+  sidnavOpen = true;
 }

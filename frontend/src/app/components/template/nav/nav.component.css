@@ -1,17 +1,38 @@
-.sidenav {
+mat-sidenav {
     width: 56px;
+    overflow-x: hidden;
+    white-space: nowrap;
 }
 
-.sidenav .icon-menu {
-    width: 25px;
+mat-sidenav-content {
+    margin-left: 55px;
+    padding: 16px;
+}
+
+.sidenav-sidenavOpen  {
+    width: 456px;
+}
+
+.content-sidenavOpen {
+    /* width: calc(500px - 250px); */
+}
+
+
+.menu-open {
     padding-top: 30px;
     padding-bottom: 20px;
 }
 
-.sidenav .icons-sidnav {
-    width: 25px;
+.list-items {
+
 }
 
-.content {
-    padding: 16px;
+.list-icons {
+    padding-right: 24px;
+}
+
+.list-label {
+    width: 250px;
+    font-weight: 500;
+    padding-right: 24px;
 }
