@@ -15,6 +15,10 @@ body {
     margin-right: 10px;
 }
 
+.marginL-10 {
+    margin-left: 10px;
+}
+
 /* Tamanhos de icone */
 .icon-size24 {
     width: 24px;

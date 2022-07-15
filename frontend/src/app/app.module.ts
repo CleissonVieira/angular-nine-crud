@@ -10,7 +10,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatBadgeModule } from '@angular/material/badge'
-import { MatExpansionModule } from '@angular/material/expansion'
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -41,7 +40,6 @@ import { HelpPageComponent } from './views/help-page/help-page.component';
     MatListModule,
     MatCardModule,
     MatBadgeModule,
-    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
