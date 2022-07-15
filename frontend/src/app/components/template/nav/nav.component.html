@@ -1,5 +1,5 @@
-<mat-sidenav-container class="container q-color-white">
-    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true">
+<mat-sidenav-container class="q-color-white">
+    <mat-sidenav #drawer class="sidenav" mode="side" opened fixedInViewport="true">
         <mat-nav-list class="nav-list">
             <a mat-list-item class="icon-menu">
                 <img class="icon-size56 q-color-primary" src="../../../../assets/icons-menu/menu.svg" alt="">
@@ -21,12 +21,14 @@
 
     <mat-sidenav-content class="content q-bgColor">
         <router-outlet></router-outlet>
+        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
 <!-- <mat-drawer-container class="q-drawer-container q-color-white" > 
-    <mat-drawer #drawer class="sidenav" mode="side" opened fixedInViewport="true"> 
-        
+    <mat-drawer #drawer class="sidenav" mode="side" opened 
+        disableClose="false"
+    > 
         <mat-nav-list class="nav-list">
             <a mat-list-item class="icon-menu">
                 <img class="icon-size56 q-color-primary" src="../../../../assets/icons-menu/menu.svg" alt="">
