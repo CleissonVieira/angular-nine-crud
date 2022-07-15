@@ -11,5 +11,5 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {}
 
   list = navbarData;
-  sidnavOpen = true;
+  sidnavOpen = false;
 }

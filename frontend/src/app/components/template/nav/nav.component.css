@@ -9,14 +9,8 @@ mat-sidenav-content {
     padding: 16px;
 }
 
-.sidenav-sidenavOpen  {
-    width: 456px;
-}
-
-.content-sidenavOpen {
-    /* width: calc(500px - 250px); */
-}
-
+.sidenav-sidenavClosed  { width: 56px; }
+.sidenav-sidenavOpen  { width: 456px; }
 
 .menu-open {
     padding-top: 30px;

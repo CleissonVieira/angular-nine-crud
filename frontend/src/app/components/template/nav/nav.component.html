@@ -1,5 +1,7 @@
 <mat-sidenav-container class="q-color-black">
-    <mat-sidenav #drawer [ngClass]="{'sidenav-sidenavOpen': sidnavOpen}" mode="side" opened fixedInViewport="true">
+    <mat-sidenav #drawer mode="side" opened fixedInViewport="true" 
+        [ngClass]="{'sidenav-sidenavOpen': sidnavOpen, 'sidenav-sidenavClosed': sidnavOpen}" 
+    >
         <mat-nav-list>
             <span class="menu-open">
                 <a mat-list-item (click)="sidnavOpen = !sidnavOpen">
@@ -17,7 +19,7 @@
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content [ngClass]="{'content-sidenavOpen': !sidnavOpen}" class="q-bgColor">
+    <mat-sidenav-content class="q-bgColor">
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
