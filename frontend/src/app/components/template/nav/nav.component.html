@@ -1,22 +1,44 @@
 <mat-sidenav-container class="q-color-black">
-    <mat-sidenav #drawer mode="side" opened fixedInViewport="true" 
-        [ngClass]="{'sidenav-sidenavOpen': sidnavOpen, 'sidenav-sidenavClosed': sidnavOpen}" 
-    >
+    <mat-sidenav #drawer mode="side" opened fixedInViewport="true" [ngClass]="{'sidenav-sidenavOpen': sidnavOpen}">
         <mat-nav-list>
-            <span class="menu-open">
+            <span>
                 <a mat-list-item (click)="sidnavOpen = !sidnavOpen">
-                    <img class="q-iconDisplay3 q-color-primary" src="../../../../assets/icons-menu/menu.svg" alt="">
+                    <img class="q-iconDisplay3 q-color-primary" src="/assets/icons-menu/menu.svg" alt="">
                 </a>
             </span>
 
-            <span *ngFor="let item of list" class="list-items">
-                <a mat-list-item routerLink="{{item.route}}">
-                    <img class="q-iconDisplay3 list-icons" src="{{item.srcImgIcon}}" alt="">
-                    <span class="list-label">{{ item.label }}</span>
-                    <img class="q-iconDisplay3 list-icons" src="../../../../assets/icons-nav/Proximo.svg" alt="">
-                </a>
-            </span>
-        </mat-nav-list>
+            <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                    <a mat-list-item routerLink="{{ node.route }}" (click)="sidnavOpen = !sidnavOpen">
+                        <div>
+                            <span class="icon-name">
+                                <img src="{{ node.imageIcon }}" *ngIf="node.imageIcon" class="icon">
+                                <span class="name" [ngClass]="{'childName': !node.imageIcon}">{{ node.name }}</span>
+                            </span>
+
+                            <button mat-icon-button disabled>
+                                <img src="{{ treeControl.isExpanded(node) ? '/assets/icons-nav/Expandir.svg' : '/assets/icons-nav/Proximo.svg' }}">
+                            </button>
+                        </div>
+                    </a>
+                </mat-tree-node>
+
+                <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding >
+                    <a mat-list-item mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                        <div>
+                            <span class="icon-name">
+                                <img src="{{ node.imageIcon }}" *ngIf="node.imageIcon" class="icon">
+                                <span class="name" [ngClass]="{'childName': !node.imageIcon}">{{ node.name }}</span>
+                            </span>
+                        
+                            <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                                <img src="{{ treeControl.isExpanded(node) ? '/assets/icons-nav/Expandir.svg' : '/assets/icons-nav/Proximo.svg' }}">
+                            </button>
+                        </div>
+                    </a>
+                </mat-tree-node>
+            </mat-tree>
+        </mat-nav-list> 
     </mat-sidenav>
 
     <mat-sidenav-content class="q-bgColor">

@@ -1,22 +1,64 @@
-export const navbarData = [
+export interface FlatNode {
+    expandable: boolean;
+    name: string;
+    route: string;
+    imageIcon: string;
+    level: number;
+}
+
+export interface FoodNode {
+    name: string;
+    route: string;
+    imageIcon: string;
+    children?: FoodNode[];
+}
+  
+export const NavData: FoodNode[] = [
     {
-        route: '/',
-        srcImgIcon: '../../../../assets/icons-menu/PaginaInicial.svg',
-        label: 'Página Inicial',
+      name: 'Página Inicial',
+      route: '/',
+      imageIcon: '/assets/icons-menu/PaginaInicial.svg',
     },
     {
-        route: '/modulos',
-        srcImgIcon: '../../../../assets/icons-menu/Modulos.svg',
-        label: 'Módulos',
+      name: 'Módulos',
+      route: '/modulos',
+      imageIcon: '/assets/icons-menu/Modulos.svg',
     },
     {
+        name: 'Gerenciador de Empresas',
         route: '/modulos/gerenciador-de-empresas',
-        srcImgIcon: '../../../../assets/icons-module/icon-gem.svg',
-        label: 'Gerenciador de Empresas',
+        imageIcon: '/assets/icons-module/icon-gem.svg',
     },
     {
-        route: '/modulos/folha-de-pagamento',
-        srcImgIcon: '../../../../assets/icons-module/icon-fpa.svg',
-        label: 'Folha de Pagamento',
-    },
-]
+        name: 'Folha de Pagamento',
+        route: '',
+        imageIcon: '/assets/icons-module/icon-fpa.svg',
+        children: [
+            {
+            name: 'Empresas',
+            route: '',
+            imageIcon: ''
+            },
+            {
+            name: 'Admissões',
+            route: '',
+            imageIcon: ''
+            },
+            {
+            name: 'Rescisões',
+            route: '',
+            imageIcon: ''
+            },
+            {
+            name: 'Recibo Ferias',
+            route: '',
+            imageIcon: ''
+            },
+            {
+            name: 'Períodos Aquisitivo',
+            route: '',
+            imageIcon: ''
+            }
+        ],
+    }
+  ];
