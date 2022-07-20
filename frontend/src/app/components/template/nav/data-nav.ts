@@ -36,27 +36,27 @@ export const NavData: FoodNode[] = [
         children: [
             {
             name: 'Empresas',
-            route: '',
+            route: '/modulos/folha-de-pagamento/configuracao-das-empresas',
             imageIcon: ''
             },
             {
             name: 'Admissões',
-            route: '',
+            route: '/modulos/folha-de-pagamento/cadastro-de-admissoes',
             imageIcon: ''
             },
             {
             name: 'Rescisões',
-            route: '',
+            route: '/modulos/folha-de-pagamento/cadastro-de-rescisoes',
             imageIcon: ''
             },
             {
             name: 'Recibo Ferias',
-            route: '',
+            route: '/modulos/folha-de-pagamento/cadastro-de-recibos-das-ferias',
             imageIcon: ''
             },
             {
             name: 'Períodos Aquisitivo',
-            route: '',
+            route: '/modulos/folha-de-pagamento/cadastro-de-periodos-aquisitivos',
             imageIcon: ''
             }
         ],

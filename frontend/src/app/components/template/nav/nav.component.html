@@ -9,11 +9,13 @@
 
             <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
                 <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-                    <a mat-list-item routerLink="{{ node.route }}" (click)="sidnavOpen = !sidnavOpen">
+                    <a mat-list-item routerLink="{{ node.route }}">
                         <div>
                             <span class="icon-name">
                                 <img src="{{ node.imageIcon }}" *ngIf="node.imageIcon" class="icon">
-                                <span class="name" [ngClass]="{'childName': !node.imageIcon}">{{ node.name }}</span>
+                                <div (click)="sidnavOpen = !sidnavOpen">
+                                    <span class="name" [ngClass]="{'childName': !node.imageIcon}">{{ node.name }}</span>
+                                </div>
                             </span>
 
                             <button mat-icon-button disabled>
@@ -27,7 +29,9 @@
                     <a mat-list-item mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
                         <div>
                             <span class="icon-name">
-                                <img src="{{ node.imageIcon }}" *ngIf="node.imageIcon" class="icon">
+                                <div (click)="sidnavOpen = !sidnavOpen" class="toggle-nav-child">
+                                    <img src="{{ node.imageIcon }}" *ngIf="node.imageIcon" class="icon">
+                                </div>
                                 <span class="name" [ngClass]="{'childName': !node.imageIcon}">{{ node.name }}</span>
                             </span>
                         

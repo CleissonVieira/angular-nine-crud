@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 
-import { NavData, FoodNode , FlatNode} from './nav-data'
+import { NavData, FoodNode , FlatNode} from './data-nav'
 
 @Component({
   selector: 'app-nav',

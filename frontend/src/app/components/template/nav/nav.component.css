@@ -13,6 +13,10 @@ mat-tree {
     margin-top: 21px;
 }
 
+mat-tree-node {
+    overflow-x: hidden;
+}
+
 mat-tree-node a div {
     width: 100%;
     display: flex; 
@@ -22,6 +26,11 @@ mat-tree-node a div {
 
 mat-tree-node a div .icon-name {
     display: flex;
+    width: 95%;
+}
+
+mat-tree-node a div .icon-name .toggle-nav-child {
+    width: 50px;
 }
 
 mat-tree-node a div .icon-name .icon {
@@ -40,6 +49,7 @@ mat-tree-node a div .icon-name .childName {
 }
 
 mat-tree-node a div button {
+    margin-left: 15px;
     background-color: transparent;
     border: none;
 }

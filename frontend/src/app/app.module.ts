@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatStepperModule } from '@angular/material/stepper';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -22,6 +24,11 @@ import { ModulesComponent } from './views/modules/modules.component';
 import { ModuleBusinessManagerComponent } from './views/module-business-manager/module-business-manager.component';
 import { ModulePayrollComponent } from './views/module-payroll/module-payroll.component';
 import { HelpPageComponent } from './views/help-page/help-page.component';
+import { CompaniesComponent } from './views/registration-pages/companies/companies.component';
+import { AdmissionsComponent } from './views/registration-pages/admissions/admissions.component';
+import { TerminationsComponent } from './views/registration-pages/terminations/terminations.component';
+import { VacationReceiptComponent } from './views/registration-pages/vacation-receipt/vacation-receipt.component';
+import { VestingPeriodsComponent } from './views/registration-pages/vesting-periods/vesting-periods.component';
  
 @NgModule({
   declarations: [
@@ -33,6 +40,11 @@ import { HelpPageComponent } from './views/help-page/help-page.component';
     ModuleBusinessManagerComponent,
     ModulePayrollComponent,
     HelpPageComponent,
+    CompaniesComponent,
+    AdmissionsComponent,
+    TerminationsComponent,
+    VacationReceiptComponent,
+    VestingPeriodsComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +58,8 @@ import { HelpPageComponent } from './views/help-page/help-page.component';
     MatFormFieldModule,
     MatTreeModule,
     MatTabsModule,
+    MatStepperModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
