@@ -1,7 +1,12 @@
 interface ITableFields {
     labelName: string;
+    placeholder: string;
     tableFieldName: string;
-    typeImput: 'select' | 'textBox' | '';
+    typeImput: 
+        'select' | 'text' | 'email' | 'phone' | 'time' | 'date' | 'radio' |
+        'password' | 'url' | 'number' | 'range' | 'datetime' | 'checkbox';
+    typeDataImput: 'string' | 'boolean' | 'integer' | 'float';
+    optionsImput?: {};
     numberOfCharacters: number;
 }
 

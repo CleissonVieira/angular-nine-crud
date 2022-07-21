@@ -1,0 +1,19 @@
+public int Codigo { get; set; }
+        public int CodigoEmpresa { get; set; }
+        public int ContaResponsavelCnpj { get; set; }
+        public int ContaResponsavelPreenchimentoFederal { get; set; }
+        public string SocioResponsavelCnpj { get; set; }
+        public int TipoEnquadramento { get; set; }
+        public string DescricaoLivro { get; set; }
+        public bool TipoAssinatura { get; set; }
+        public int InicioFolhaLivro { get; set; }
+        public int LimiteFolhaLivro { get; set; }
+        public string DescricaoFolhaLivro { get; set; }
+        public int TipoCabecalho { get; set; }
+        public bool UsaGrupoPessoaPadrao { get; set; }
+        public bool UsaPessoaContaContabil { get; set; }
+        public string MascataGrupoProduto { get; set; }
+        public bool UsaReferenciaProduto { get; set; }
+        public bool LivroModelo7 { get; set; }
+        public string MascaraClassificacaoFiscalProduto { get; set; }
+        public bool UsaLinhaAssinatura { get; set; }
