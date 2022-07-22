@@ -1,4 +1,5 @@
 interface ITableFields {
+    required: boolean;
     labelName: string;
     placeholder: string;
     tableFieldName: string;
@@ -7,6 +8,7 @@ interface ITableFields {
         'password' | 'url' | 'number' | 'range' | 'datetime' | 'checkbox';
     typeDataImput: 'string' | 'boolean' | 'integer' | 'float';
     optionsImput?: {};
+    mask?: string[];
     numberOfCharacters: number;
 }
 
