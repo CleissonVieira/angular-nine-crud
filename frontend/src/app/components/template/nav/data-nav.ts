@@ -60,5 +60,6 @@ export const NavData: FoodNode[] = [
             imageIcon: ''
             }
         ],
-    }
+    },
+    
   ];

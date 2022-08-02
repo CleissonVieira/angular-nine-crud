@@ -1,0 +1,257 @@
+CODIGOPAIS|NOMEPAIS                                                                                            |CODIGOPAISNIS|CODIGOPAISRS|CODIGOPAISESOCIAL|CODIGOPAISSPED|CODIGOPAISISO
+       132|Afeganistao                                                                                         |          241|         400|               13|AF            |AFG          
+      7560|Africa Do Sul                                                                                       |          173|           1|              756|ZA            |ZAF          
+       175|Albania, Republica Da                                                                               |           93|         500|               17|AL            |ALB          
+       230|Alemanha                                                                                            |           30|         501|               23|DE            |DEU          
+       370|Andorra                                                                                             |           94|         502|               37|AD            |AND          
+       400|Angola                                                                                              |          175|           2|               40|AO            |AGO          
+       418|Anguilla                                                                                            |             |            |               41|AI            |AIA          
+       434|Antigua E Barbuda                                                                                   |           28|         100|               43|AG            |ATG          
+       477|Antilhas Holandesas                                                                                 |           29|            |               47|AN            |ANT          
+       531|Arabia Saudita                                                                                      |          242|            |               53|SA            |SAU          
+       590|Argelia                                                                                             |          176|           3|               59|DZ            |DZA          
+       639|Argentina                                                                                           |           21|         300|               63|AR            |ARG          
+       647|Armenia, Republica Da                                                                               |          347|         503|               64|AM            |ARM          
+       655|Aruba                                                                                               |           33|            |               65|AW            |ABW          
+       698|Australia                                                                                           |          288|         600|               69|AU            |AUS          
+       728|Austria                                                                                             |           95|         504|               72|AT            |AUT          
+       736|Azerbaijao, Republica Do                                                                            |          138|         505|               73|AZ            |AZE          
+       779|Bahamas, Ilhas                                                                                      |           40|         101|               77|BS            |BHS          
+       809|Bahrein, Ilhas                                                                                      |          243|            |               80|BH            |BHR          
+       817|Bangladesh                                                                                          |          342|         402|               81|BD            |BGD          
+       833|Barbados                                                                                            |           44|         102|               83|BB            |BRB          
+       850|Belarus, Republica Da                                                                               |          140|         506|               85|BY            |BLR          
+       876|Belgica                                                                                             |           31|         507|               87|BE            |BEL          
+       884|Belize                                                                                              |           46|         103|               88|BZ            |BLZ          
+      2291|Benin                                                                                               |          178|           4|              229|BJ            |BEN          
+       906|Bermudas                                                                                            |           83|            |               90|BM            |BMU          
+       973|Bolivia                                                                                             |           22|         301|                 |BO            |BOL          
+       981|Bosnia-Herzegovina (Republica Da)                                                                   |          134|         508|                 |BA            |BIH          
+      1015|Botsuana                                                                                            |          179|           5|              101|BW            |BWA          
+      1058|Brasil                                                                                              |           10|         311|              105|BR            |BRA          
+      1082|Brunei                                                                                              |          245|         404|              108|BN            |BRN          
+      1112|Bulgaria, Republica Da                                                                              |           96|         509|              111|BG            |BGR          
+       310|Burkina Faso                                                                                        |          238|           6|               31|BF            |BFA          
+      1155|Burundi                                                                                             |          180|           7|              115|BI            |BDI          
+      1198|Butao                                                                                               |          141|         405|              119|BT            |BTN          
+      1279|Cabo Verde, Republica De                                                                            |          343|           8|              127|CV            |CPV          
+      1457|Camaroes                                                                                            |          181|           9|              145|CM            |CMR          
+      1414|Camboja                                                                                             |          261|         406|              141|KH            |KHM          
+      1490|Canada                                                                                              |           34|         200|              149|CA            |CAN          
+      1511|Canarias, Ilhas                                                                                     |          109|            |              151|              |             
+      1546|Catar                                                                                               |          247|         407|              154|QA            |QAT          
+      1376|Cayman, Ilhas                                                                                       |             |            |              137|KY            |CYM          
+      1538|Cazaquistao, Republica Do                                                                           |          143|         408|              153|KZ            |KAZ          
+      7889|Chade                                                                                               |          183|          10|              788|TD            |TCD          
+      1589|Chile                                                                                               |           23|         302|              158|CL            |CHL          
+      1600|China, Republica Popular                                                                            |           42|         409|              160|CN            |CHN          
+      1635|Chipre                                                                                              |           97|         510|              163|CY            |CYP          
+      5118|Christmas,Ilha (Navidad)                                                                            |          297|            |                 |CX            |CXR          
+      7412|Cingapura                                                                                           |          275|         410|              741|SG            |SGP          
+      1651|Cocos(Keeling),Ilhas                                                                                |          328|            |              165|CC            |CCK          
+      1694|Colombia                                                                                            |           26|         303|              169|CO            |COL          
+      1732|Comores, Ilhas                                                                                      |          184|          23|              173|KM            |COM          
+      1775|Congo                                                                                               |          185|          11|              177|CG            |COG          
+      8885|Congo, Republica Democratica Do                                                                     |             |            |              888|CD            |COD          
+      1830|Cook, Ilhas                                                                                         |          290|            |              183|CK            |COK          
+      1872|Coreia, Rep.Pop.Democratica                                                                         |           43|         411|                 |KP            |PRK          
+      1902|Coreia, Republica Da                                                                                |           43|         412|                 |KR            |KOR          
+      1937|Costa Do Marfim                                                                                     |          186|          12|              193|CI            |CIV          
+      1961|Costa Rica                                                                                          |           51|         104|              196|CR            |CRI          
+      1988|Kuwait                                                                                              |          250|            |              198|KW            |KWT          
+      1953|Croacia (Republica Da)                                                                              |          130|         511|                 |HR            |HRV          
+      1996|Cuba                                                                                                |           52|         105|              199|CU            |CUB          
+      2321|Dinamarca                                                                                           |           98|         512|              232|DK            |DNK          
+      7838|Djibuti                                                                                             |          188|          13|              783|DJ            |DJI          
+      2356|Dominica,Ilha                                                                                       |           55|         106|              235|DM            |DMA          
+      2402|Egito                                                                                               |          189|          14|              240|EG            |EGY          
+      6874|El Salvador                                                                                         |           56|         107|              687|SV            |SLV          
+      2445|Emirados Arabes Unidos                                                                              |          251|         413|              244|AE            |ARE          
+      2399|Equador                                                                                             |           27|         304|              239|EC            |ECU          
+      2437|Eritreia                                                                                            |             |          15|              243|ER            |ERI          
+      2470|Eslovaca, Republica                                                                                 |          136|         513|              247|SK            |SVK          
+      2461|Eslovenia, Republica Da                                                                             |          132|         514|              246|SI            |SVN          
+      2453|Espanha                                                                                             |           35|         515|              245|ES            |ESP          
+      2496|Estados Unidos                                                                                      |           36|         201|              249|US            |USA          
+      2518|Estonia, Republica Da                                                                               |          147|         516|              251|EE            |EST          
+      2534|Etiopia                                                                                             |          190|          16|              253|ET            |ETH          
+      2550|Falkland (Ilhas Malvinas)                                                                           |           58|            |                 |FK            |FLK          
+      2593|Feroe, Ilhas                                                                                        |          101|            |              259|FO            |FRO          
+      8702|Fiji                                                                                                |          291|         601|              870|FJ            |FJI          
+      2674|Filipinas                                                                                           |          252|         414|              267|PH            |PHL          
+      2712|Finlandia                                                                                           |          102|         518|              271|FI            |FIN          
+      1619|Formosa (Taiwan)                                                                                    |          249|         415|                 |TW            |             
+      2755|Franca                                                                                              |           37|         519|              275|FR            |FRA          
+      2810|Gabao                                                                                               |          191|          17|              281|GA            |GAB          
+      2852|Gambia                                                                                              |          192|          18|              285|GM            |GMB          
+      2895|Gana                                                                                                |          193|          19|              289|GH            |GHA          
+      2917|Georgia, Republica Da                                                                               |          148|         520|              291|GE            |GEO          
+      2933|Gibraltar                                                                                           |          103|            |              293|GI            |GIB          
+      2976|Granada                                                                                             |           59|         108|              297|GD            |GRD          
+      3018|Grecia                                                                                              |          104|         521|              301|GR            |GRC          
+      3050|Groenlandia                                                                                         |           84|            |              305|GL            |GRL          
+      3093|Guadalupe                                                                                           |           60|            |              309|GP            |GLP          
+      3131|Guam                                                                                                |          292|            |              313|GU            |GUM          
+      3174|Guatemala                                                                                           |           61|         109|              317|GT            |GTM          
+      1504|Guernsey                                                                                            |             |            |              321|GG            |GGY          
+      3379|Guiana                                                                                              |           88|         305|              337|GY            |GUY          
+      3255|Guiana Francesa                                                                                     |           87|            |              337|GF            |GUF          
+      3298|Guine                                                                                               |          195|          20|              329|GN            |GIN          
+      3344|Guine-Bissau                                                                                        |          344|          22|              334|              |GNB          
+      3310|Guine-Equatorial                                                                                    |          196|          21|              331|              |GNQ          
+      3417|Haiti                                                                                               |           62|         110|              341|HT            |HTI          
+      3450|Honduras                                                                                            |           64|         111|              345|HN            |HND          
+      3514|Hong Kong                                                                                           |          253|            |              351|HK            |HKG          
+      3557|Hungria, Republica Da                                                                               |          106|         523|              355|HU            |HUN          
+      3573|Iemen                                                                                               |          254|         416|              357|YE            |YEM          
+      3611|India                                                                                               |          255|         417|              361|IN            |IND          
+      3654|Indonesia                                                                                           |          256|         418|              365|ID            |IDN          
+      3727|Ira, Republica Islamica Do                                                                          |          257|         419|              372|IR            |IRN          
+      3697|Iraque                                                                                              |          258|         420|              369|IQ            |IRQ          
+      3751|Irlanda                                                                                             |          112|         524|              375|IE            |IRL          
+      3794|Islandia                                                                                            |          111|         525|              379|IS            |ISL          
+      3832|Israel                                                                                              |          113|         421|              383|IL            |ISR          
+      3867|Italia                                                                                              |           39|         526|              386|IT            |ITA          
+      3913|Jamaica                                                                                             |           66|         112|              391|JM            |JAM          
+      3999|Japao                                                                                               |           41|         422|              399|JP            |JPN          
+      1508|Jersey                                                                                              |             |            |              393|JE            |JEY          
+      3964|Johnston, Ilhas                                                                                     |          300|            |              396|UM            |             
+      4030|Jordania                                                                                            |          260|         423|              403|JO            |JOR          
+      4111|Kiribati                                                                                            |          298|         604|              411|KI            |KIR          
+      4200|Laos, Rep.Pop.Democr.Do                                                                             |          263|         425|              420|LA            |LAO          
+      4235|Lebuan,Ilhas                                                                                        |             |            |              423|              |             
+      4260|Lesoto                                                                                              |          200|          24|              426|LS            |LSO          
+      4278|Letonia, Republica Da                                                                               |          155|         528|              427|              |LVA          
+      4316|Libano                                                                                              |          264|         426|              431|LB            |LBN          
+      4340|Liberia                                                                                             |          201|          25|              434|LR            |LBR          
+      4383|Libia                                                                                               |          202|          26|              438|LY            |LBY          
+      4405|Liechtenstein                                                                                       |          115|         529|              440|LI            |LIE          
+      4421|Lituania, Republica Da                                                                              |          156|         530|              442|LT            |LTU          
+      4456|Luxemburgo                                                                                          |          116|         531|              445|LU            |LUX          
+      4472|Macau                                                                                               |          265|            |              447|MO            |MAC          
+      4499|Macedônia do Norte                                                                                  |          133|         532|              449|MK            |MKD          
+      4502|Madagascar                                                                                          |          205|          27|              450|MG            |MDG          
+      4525|Madeira, Ilha Da                                                                                    |          203|            |                 |              |             
+      4553|Malasia                                                                                             |          266|         427|              455|MY            |MYS          
+      4588|Malavi                                                                                              |             |          28|              458|MW            |MWI          
+      4618|Maldivas                                                                                            |          267|         428|              461|MV            |MDV          
+      4642|Mali                                                                                                |          206|          29|              464|ML            |MLI          
+      4677|Malta                                                                                               |          120|         533|              467|MT            |MLT          
+      3595|Man, Ilha De                                                                                        |          117|            |              359|IM            |IMN          
+      4723|Marianas Do Norte                                                                                   |          303|            |              472|MP            |MNP          
+      4740|Marrocos                                                                                            |          207|          30|              474|MA            |MAR          
+      4766|Marshall,Ilhas                                                                                      |          304|         602|              476|MH            |MHL          
+      4774|Martinica                                                                                           |           68|            |              477|MQ            |MTQ          
+      4855|Mauricio                                                                                            |          208|          31|              485|MU            |             
+      4880|Mauritania                                                                                          |          209|          32|              488|MR            |MUS          
+      4936|Mexico                                                                                              |           85|         202|              493|MX            |MEX          
+       930|Mianmar (Birmania)                                                                                  |          284|         429|                 |              |MMR          
+      4995|Micronesia                                                                                          |             |         605|              499|FM            |FSM          
+      4901|Midway, Ilhas                                                                                       |          286|            |              490|              |             
+      5053|Mocambique                                                                                          |          210|          33|              505|MZ            |MOZ          
+      4944|Moldavia, Republica Da                                                                              |             |         534|              494|MD            |MDA          
+      4952|Monaco                                                                                              |          118|         535|              495|MC            |MCO          
+      4979|Mongolia                                                                                            |          269|         430|              497|MN            |MNG          
+      4985|Montenegro                                                                                          |          137|            |              498|ME            |MNE          
+      5010|Montserrat,Ilhas                                                                                    |             |            |              501|MS            |MSR          
+      5070|Namibia                                                                                             |          240|          34|              507|NA            |NAM          
+      5088|Nauru                                                                                               |          314|         606|              508|NR            |NRU          
+      5177|Nepal                                                                                               |          270|         431|              517|NP            |NPL          
+      5215|Nicaragua                                                                                           |           71|         113|              521|NI            |NIC          
+      5258|Niger                                                                                               |          211|          35|              525|NE            |NER          
+      5282|Nigeria                                                                                             |           71|          36|              528|NG            |NGA          
+      5312|Niue,Ilha                                                                                           |             |            |              531|NU            |NIU          
+      5355|Norfolk,Ilha                                                                                        |          306|            |              535|NF            |NFK          
+      5380|Noruega                                                                                             |          212|         536|              538|NO            |NOR          
+      5428|Nova Caledonia                                                                                      |          307|            |              542|NC            |NCL          
+      5487|Nova Zelandia                                                                                       |          338|         607|              548|NZ            |NZL          
+      5568|Oma                                                                                                 |          317|         432|              556|OM            |OMN          
+      5665|Pacifico,Ilhas Do (Possessao Dos Eua)                                                               |             |            |                 |              |             
+      5738|Paises Baixos (Holanda)                                                                             |          159|         522|                 |NL            |NLD          
+      5754|Palau                                                                                               |          296|         608|              575|PW            |PLW          
+      5800|Panama                                                                                              |          122|         114|              580|PA            |PAN          
+      5452|Papua Nova Guine                                                                                    |          272|         609|              545|PG            |PNG          
+      5762|Paquistao                                                                                           |           73|         433|              576|PK            |PAK          
+      5860|Paraguai                                                                                            |          214|         306|              586|PY            |PRY          
+      5894|Peru                                                                                                |          273|         307|              589|PE            |PER          
+      5932|Pitcairn,Ilha                                                                                       |           24|            |              593|PN            |PCN          
+      5991|Polinesia Francesa                                                                                  |          320|            |              599|PF            |PYF          
+      6033|Polonia, Republica Da                                                                               |           89|         537|              603|PL            |POL          
+      6114|Porto Rico                                                                                          |          321|            |              611|PR            |PRI          
+      6076|Portugal                                                                                            |          322|         538|              607|PT            |PRT          
+      6238|Quenia                                                                                              |          123|          37|              623|KE            |KEN          
+      6254|Quirguiz, Republica                                                                                 |             |         434|              625|KG            |KGZ          
+      6289|Reino Unido                                                                                         |             |         539|              628|GB            |GBR          
+      6408|Republica Centro-Africana                                                                           |          218|          38|              640|CF            |CAF          
+      6475|Republica Dominicana                                                                                |             |         115|              647|DO            |DOM          
+      6602|Reuniao, Ilha                                                                                       |           48|            |              660|RE            |REU          
+      6700|Romenia                                                                                             |           50|         541|              670|RO            |ROU          
+      6750|Ruanda                                                                                              |          124|          39|              675|RW            |RWA          
+      6769|Russia, Federacao Da                                                                                |          340|         517|              676|RU            |RUS          
+      6858|Saara Ocidental                                                                                     |          221|            |              685|EH            |ESH          
+      6781|Saint Kitts E Nevis                                                                                 |          348|            |              678|KN            |KNA          
+      6777|Salomao, Ilhas                                                                                      |          222|         603|              677|SB            |SLB          
+      6904|Samoa                                                                                               |          325|         610|              690|WS            |WSM          
+      6912|Samoa Americana                                                                                     |          324|            |              691|AS            |ASM          
+      6971|San Marino                                                                                          |             |         542|              697|SM            |SMR          
+      7102|Santa Helena                                                                                        |          223|            |              710|SH            |SHN          
+      7153|Santa Lucia                                                                                         |           77|         116|              715|LC            |LCA          
+      6955|Sao Cristovao E Neves,Ilhas                                                                         |           78|         117|              695|              |             
+      7005|Sao Pedro E Miquelon                                                                                |           86|            |              700|PM            |SPM          
+      7056|Sao Vicente E Granadinas                                                                            |           79|         118|              705|VC            |VCT          
+      7285|Senegal                                                                                             |          349|          41|              728|SN            |SEN          
+      7358|Serra Leoa                                                                                          |          226|          42|              735|SL            |SLE          
+      7370|Servia                                                                                              |          131|            |              737|RS            |SRB          
+      7315|Seychelles                                                                                          |          225|          43|              731|SC            |SYC          
+      7447|Siria, Republica Arabe Da                                                                           |          277|         435|              744|SY            |SYR          
+      7480|Somalia                                                                                             |          227|          44|              748|SO            |SOM          
+      7501|Sri Lanka                                                                                           |          278|         436|              750|LK            |LKA          
+      7544|eSwatini                                                                                            |          228|          45|              754|SZ            |SWZ          
+      7595|Sudao                                                                                               |          229|          46|              759|SD            |SDN          
+      7641|Suecia                                                                                              |          126|         543|              764|SE            |SWE          
+      7676|Suica                                                                                               |           38|         544|              767|CH            |CHE          
+      7706|Suriname                                                                                            |           90|         308|              770|SR            |SUR          
+      7722|Tadjiquistao, Republica Do                                                                          |          161|         437|              772|TJ            |TJK          
+      7765|Tailandia                                                                                           |          279|         438|              776|TH            |THA          
+      7803|Tanzania, Rep.Unida Da                                                                              |          350|          47|              780|TZ            |TZA          
+      7919|Tcheca, Republica                                                                                   |          128|         540|              791|CZ            |CZE          
+      7820|Territorio Brit.Oc.Indico                                                                           |          231|            |              782|IO            |             
+      7951|Timor Leste                                                                                         |          329|            |              795|TL            |TLS          
+      8001|Togo                                                                                                |          233|          48|              800|TG            |TGO          
+      8109|Tonga                                                                                               |          330|         611|              810|TO            |TON          
+      8052|Toquelau,Ilhas                                                                                      |          310|            |              805|TK            |TKL          
+      8150|Trinidad E Tobago                                                                                   |           91|         119|              815|TT            |TTO          
+      8206|Tunisia                                                                                             |          234|          49|              820|TN            |TUN          
+      8230|Turcas E Caicos,Ilhas                                                                               |           80|            |              823|TC            |TCA          
+      8249|Turcomenistao, Republica Do                                                                         |          163|         439|              824|TM            |TKM          
+      8273|Turquia                                                                                             |          281|         440|              827|TR            |TUR          
+      8281|Tuvalu                                                                                              |          331|         612|              828|TV            |TUV          
+      8311|Ucrania                                                                                             |          165|         545|              831|UA            |UKR          
+      8338|Uganda                                                                                              |          235|          50|              833|UG            |UGA          
+      8451|Uruguai                                                                                             |           25|         309|              845|UY            |URY          
+      8478|Uzbequistao, Republica Do                                                                           |          168|         441|              847|UZ            |UZB          
+      5517|Vanuatu                                                                                             |          318|         613|              551|VU            |VUT          
+      8486|Vaticano, Est.Da Cidade Do                                                                          |          129|         546|              848|VA            |VAT          
+      8508|Venezuela                                                                                           |           92|         310|              850|VE            |VEN          
+      8583|Vietna                                                                                              |          283|         442|              858|VN            |VNM          
+      8630|Virgens,Ilhas (Britanicas)                                                                          |           81|            |                 |VG            |VGB          
+      8664|Virgens,Ilhas (E.U.A.)                                                                              |           82|            |              866|VI            |VIR          
+      8737|Wake, Ilha                                                                                          |          311|            |              873|              |             
+      8907|Zambia                                                                                              |          237|          52|              890|ZM            |ZMB          
+      6653|Zimbabue                                                                                            |          239|          53|              665|ZW            |ZWE          
+      9763|Afeganistao                                                                                         |          241|         400|               13|AF            |             
+      9764|Aland, Ilhas                                                                                        |             |            |               15|AX            |             
+      9765|Antartica                                                                                           |             |            |               42|              |             
+      9766|Bonaire, Saint Eustatius E Saba                                                                     |             |            |               99|BQ            |             
+      9767|Bouvet, Ilha                                                                                        |             |            |              102|BV            |             
+      9768|Curacao                                                                                             |           53|            |              200|              |             
+      9769|Georgia Do Sul E Sandwich Do Sul, Ilhas                                                             |             |            |              292|GS            |             
+      9770|Heard E Ilhas McDonald, Ilha                                                                        |          305|            |              343|HM            |             
+      9771|Mayotte                                                                                             |             |            |              489|YT            |             
+      9772|Sao Bartolomeu                                                                                      |             |            |              693|BL            |             
+      9773|Sao Martinho, Ilha De (Parte Francesa)                                                              |             |            |              698|              |             
+      9774|Sao Martinho, Ilha De (Parte Holandesa)                                                             |             |            |              699|SX            |             
+      9775|Svalbard E Jan Mayen                                                                                |          127|            |              755|SJ            |             
+      9776|Sudao Do Sul                                                                                        |             |            |              760|SS            |             
+      9777|Terras Austrais Francesas                                                                           |          341|            |              781|              |             
+      9778|Zona Do Canal Do Panama                                                                             |           73|            |              895|              |             

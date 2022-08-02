@@ -8,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ModuleBusinessManagerComponent implements OnInit {
 
   constructor() { }
+
   ngOnInit(): void {}
+
   isLinear = false;
+
+  formValidateAndSend(): void {
+    console.log("Validando e enviado os dados...")
+  }
 
 }

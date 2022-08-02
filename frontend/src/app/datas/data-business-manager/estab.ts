@@ -1,69 +1,702 @@
-public int Codigo { get; set; }
-public int CodigoEmpresa { get; set; }
-public long? CodigoEstabelecimento { get; set; }
-public string NomeEstabelecimento { get; set; }
-public DateTime? DataInicial { get; set; }
-public string NomeEstabelecimentoCompleto { get; set; }
-public string NomeFantasiaFilial { get; set; }
-public string ApelidoEstabelecimento { get; set; }
-public string CepEnderecoEstabelecimento { get; set; }
-public int? CodigoTipoLogradouro { get; set; }
-public string EnderecoEstabelecimento { get; set; }
-public int NumeroEnderecoEstabelecimento { get; set; }
-public string ComplementoEnderecoEstabelecimento { get; set; }
-public string BairroEnderecoEstabelecimento { get; set; }
-public DateTime? DataUltimaAlteracaoEndereco { get; set; }
-public string SiglaEstado { get; set; }
-public int? CodigoMunicipio { get; set; }
-public string DDDTelefone { get; set; }
-public string NumeroTelefone { get; set; }
-public string DDDFax { get; set; }
-public string NumeroFax { get; set; }
-public string CaixaPostal { get; set; }
-public string SiglaEstadoCaixaPostal { get; set; }
-public string CepCaixaPostal { get; set; }
-public string Email { get; set; }
-public string EmailDpo { get; set; }
-public string PaginaInternet { get; set; }
-public DateTime? DataInicioAtividade { get; set; }
-public DateTime? DataEnceraAtividade { get; set; }
-public bool SociedadeContaParticipacao { get; set; }
-public string InscricaoScp { get; set; }
-public string TipoInscricao { get; set; }
-public string InscricaoFederal { get; set; }
-public string CpfResponsavelCno { get; set; }
-public string Caepf { get; set; }
-public string InscricaoCaepf { get; set; }
-public string InscricaoFederalProdutorRural { get; set; }
-public string Suframa { get; set; }
-public int CodigoNaturezaJuridica { get; set; }
-public string CodigoAtividadeFederal { get; set; }
-public string DescricaoAtividadeFederalEstabelecimento { get; set; }
-public DateTime? DataAlteracaoAtividadeFederal { get; set; }
-public int? TipoRegistro { get; set; }
-public string NumeroRegistro { get; set; }
-public DateTime? DataRegistro { get; set; }
-public string ObservacaoRegistro { get; set; }
-public string InscricaoEstadual { get; set; }
-public string CodigoAtividadeEstadual { get; set; }
-public string DescricaoAtividadeEstadualEstabelecimento { get; set; }
-public string InscricaoMunicipal { get; set; }
-public string CodigoAtividadeMunicipal { get; set; }
-public string InscricaoMobiliaria { get; set; }
-public string EspecieEstabelecimento { get; set; }
-public string InscricaoBancoCentral { get; set; }
-public string InscricaoSusep { get; set; }
-public string DescricaoAtividadeMunicipalEstabelecimento { get; set; }
-public string InscricaoCvm { get; set; }
-public int CodigoTabelaFeriado { get; set; }
-public double ValorNominalCotas { get; set; }
-public string CapitalSocial { get; set; }
-public int PorteEmpresa { get; set; }
-public string NomeAuditor { get; set; }
-public string CvmAuditor { get; set; }
-public string InscricaoFederalAuditor { get; set; }
-public string CodigoCategoriaEmpresaCliente { get; set; }
-public int TipoAlteracaoESocial { get; set; }
-public string Certificado { get; set; }
-public int StatusSincZen { get; set; }
-public DateTime? DataHistorico { get; set; }
+import { DDD } from '../data-questor/DDD'
+import { ITable } from '../DataInterface'
+import { TipoLogradouro } from '../data-questor/TipoLogradouro'
+import { EstadoMunicipio } from '../data-questor/EstadoMunicipio'
+import { 
+    OrgaoCompetenteRegistro, SimNão, 
+    TipoAlteracaoESocial, TipoInscricaoFederalCNO 
+} from '../data-questor/Options'
+
+const DataEstabelecimento: ITable[] = [
+    {
+        titleName: 'Estabelecimento',
+        tableName: 'estab',
+        children: [
+            {
+                requiredField: true,
+                labelName: 'Codigo da Empresa',
+                placeholder: 'informe o código da empresa',
+                tableFieldName: 'CodigoEmpresa',
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 5,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Codigo do Estabelecimento',
+                placeholder: 'informe o código do estabelecimento',
+                tableFieldName: 'CodigoEstabelecimento',
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 5,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Razão Social da Matriz/Filial',
+                placeholder: 'informe a razão social da matriz ou filial',
+                tableFieldName: 'NomeEstabelecimento',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 100,
+                fixedValue: null,
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'DataInicial',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 10,
+                fixedValue: '01/01/1900',
+            },
+            {
+                requiredField: true,
+                labelName: 'Razão Social Completa',
+                placeholder: 'informe a razão social completa',
+                tableFieldName: 'NomeEstabelecimentoCompleto',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 300,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Nome Fantasia',
+                placeholder: 'informe o mome de fantasia da filial',
+                tableFieldName: 'NomeFantasiaFilial',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 55,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Identificação para o Estabelecimento',
+                placeholder: 'Exemplo: Matriz, Filial 1, Filial 2 etc..',
+                tableFieldName: 'ApelidoEstabelecimento',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'CEP',
+                placeholder: 'informe o cep do estabelecimento',
+                tableFieldName: 'CepEnderecoEstabelecimento', 
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                mask: ['00.000-000'],
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Tipo de Logradouro',
+                placeholder: 'informe se é rua, avenida, etc.',
+                tableFieldName: 'CodigoTipoLogradouro', 
+                typeImput: 'select',
+                typeDataImputReturn: 'integer',
+                optionsImput: TipoLogradouro,
+                numberOfCharacters: 21,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Endereço',
+                placeholder: 'digite o nome da rua',
+                tableFieldName: 'EnderecoEstabelecimento', 
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 40,
+                fixedValue: null,
+            },
+            {           
+                requiredField: true,
+                labelName: 'Número',
+                placeholder: 'digite o número do endereço',
+                tableFieldName: 'NumeroEnderecoEstabelecimento', 
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 7,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Complemento',
+                placeholder: 'exemplo: casa, apto, bloco...',
+                tableFieldName: 'ComplementoEnderecoEstabelecimento', 
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 50,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Bairro',
+                placeholder: 'digite o nome de seu bairro',
+                tableFieldName: 'BairroEnderecoEstabelecimento', 
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 30,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Última Alteração de Endereço',
+                placeholder: 'informe a data da última alterção de endereço',
+                tableFieldName: 'DataUltimaAlteracaoEndereco',
+                typeImput: 'date',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Estado',
+                placeholder: 'informe a sigla do estado',
+                tableFieldName: 'SiglaEstado', 
+                typeImput: 'select',
+                typeDataImputReturn: 'string',
+                optionsImput: EstadoMunicipio,
+                numberOfCharacters: 2,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Município',
+                placeholder: 'informe o município',
+                tableFieldName: 'CodigoMunicipio', 
+                typeImput: 'select',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 8,
+                optionsImput: EstadoMunicipio,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'DDD Telefone',
+                placeholder: 'digite o DDD',
+                tableFieldName: 'DDDTelefone', 
+                typeImput: 'select',
+                typeDataImputReturn: 'integer',
+                optionsImput: DDD,
+                numberOfCharacters: 5,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Telefone',
+                placeholder: 'digite o número de telefone',
+                tableFieldName: 'NumeroTelefone', 
+                typeImput: 'phone',
+                typeDataImputReturn: 'integer',
+                mask: ['00000-0000'],
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'DDD Fax',
+                placeholder: 'digite o DDD',
+                tableFieldName: 'DDDFax', 
+                typeImput: 'select',
+                typeDataImputReturn: 'integer',
+                optionsImput: DDD,
+                numberOfCharacters: 5,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Fax',
+                placeholder: 'digite o número do fax',
+                tableFieldName: 'NumeroFax', 
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                mask: ['00000-0000'],
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'CaixaPostal',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 7,
+                fixedValue: '',
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'SiglaEstadoCaixaPostal',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 2,
+                fixedValue: '',
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'CepCaixaPostal',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 10,
+                fixedValue: '',
+            },
+            {
+                requiredField: true,
+                labelName: 'E-mail',
+                placeholder: 'informe o e-mail do estabelecimento',
+                tableFieldName: 'Email',
+                typeImput: 'email',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 100,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'E-mail Departamento',
+                placeholder: 'informe o e-mail do departamento',
+                tableFieldName: 'EmailDpo',
+                typeImput: 'email',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 100,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: '',
+                placeholder: '',
+                tableFieldName: 'PaginaInternet',
+                typeImput: 'url',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 100,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Data do Inicio da Atividade',
+                placeholder: 'informe a data do inicio da atividade',
+                tableFieldName: 'DataInicioAtividade',
+                typeImput: 'date',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'DataEnceraAtividade',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 10,
+                fixedValue: '',
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'SociedadeContaParticipacao',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 1,
+                fixedValue: 0,
+            },
+            {
+                requiredField: true,
+                labelName: 'Inscrição SCP',
+                placeholder: 'informe a inscrição scp',
+                tableFieldName: 'InscricaoScp',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 14,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Tipo de Inscrição Federal',
+                placeholder: 'Informe se Cpf ou Cnpj',
+                tableFieldName: 'TipoInscricao', 
+                typeImput: 'select',
+                typeDataImputReturn: 'integer',
+                optionsImput: TipoInscricaoFederalCNO,
+                numberOfCharacters: 2,
+                fixedValue: null,
+                children: [
+                    {
+                        requiredField: true,
+                        labelName: 'Cadastro: de Pessoa Física / Nacional de Pessoa Jurídica',
+                        placeholder: 'XXX.XXX.XXX-XX ou XX.XXX.XXX/0001-XX',
+                        tableFieldName: 'InscricaoFederal', 
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        mask: ['000.000.000-00', '00.000.000/0001-00', '00.000.00000/00'],
+                        numberOfCharacters: 18,
+                        fixedValue: null,
+                    },
+                ]
+            },
+            {
+                requiredField: true,
+                labelName: 'CPF do Responsável Cno',
+                placeholder: 'informe o cpf do responsável Cno',
+                tableFieldName: 'CpfResponsavelCno', 
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                mask: ['000.000.000-00'],
+                numberOfCharacters: 18,
+                fixedValue: null,
+            },
+            { // Contribuinte Individual=1;Produtor Rural=2;Segurado Especial=3;
+            //dúvida se não é do tipo option com as opções acima
+                requiredField: true,
+                labelName: 'Cadastro das Atividades Econômicas das Pessoas Físicas',
+                placeholder: 'informe o CAEPF',
+                tableFieldName: 'Caepf',
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Inscricao Cadastro das Atividades Econômicas das Pessoas Físicas',
+                placeholder: 'informe a inscrição do CAEPF',
+                tableFieldName: 'InscricaoCaepf',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 14,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Inscrição Federal Produtor Rural',
+                placeholder: 'informe o cnpj do produtor rural',
+                tableFieldName: 'InscricaoFederalProdutorRural', 
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                mask: ['00.000.000/0001-00'],
+                numberOfCharacters: 18,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Suframa',
+                placeholder: 'informe o valor para suframa',
+                tableFieldName: 'Suframa',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 9,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Natureza Jurídica',
+                placeholder: 'informe o código da natureza jurídica',
+                tableFieldName: 'CodigoNaturezaJuridica',
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 5,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Atividade Federal',
+                placeholder: 'informe o código da atividade federal',
+                tableFieldName: 'CodigoAtividadeFederal',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 9,
+                fixedValue: null,
+                children: [
+                    {
+                        requiredField: true,
+                        labelName: 'Descrição da Atividade Federal',
+                        placeholder: 'informe a descrição da atividade federal',
+                        tableFieldName: 'DescricaoAtividadeFederalEstabelecimento',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 200,
+                        fixedValue: null,
+                    },
+                    {
+                        requiredField: true,
+                        labelName: 'Data Alteração da Atividade Federal',
+                        placeholder: 'informe a data de alteração da atividade federal',
+                        tableFieldName: 'DataAlteracaoAtividadeFederal',
+                        typeImput: 'date',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: null,
+                    },
+                ]
+            },
+            {
+                requiredField: true,
+                labelName: 'Órgão competente pelo registro',
+                placeholder: 'informe o órgão competente pelo registro',
+                tableFieldName: 'TipoRegistro',
+                typeImput: 'select',
+                typeDataImputReturn: 'integer',
+                optionsImput: OrgaoCompetenteRegistro,
+                numberOfCharacters: 2,
+                fixedValue: null,
+                children: [
+                    {
+                        requiredField: true,
+                        labelName: 'Registro Órgão Competente',
+                        placeholder: 'informe o número do registro no orgão competente',
+                        tableFieldName: 'NumeroRegistro',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 50,
+                        fixedValue: null,
+                    },
+                    {
+                        requiredField: true,
+                        labelName: 'Data Registro Órgão Competente',
+                        placeholder: 'informe a data do registro no orgão competente',
+                        tableFieldName: 'DataRegistro',
+                        typeImput: 'date',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: null,
+                    },
+                    {
+                        requiredField: false,
+                        labelName: 'Observação',
+                        placeholder: 'informe a observação do registro',
+                        tableFieldName: 'ObservacaoRegistro',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 150,
+                        fixedValue: null,
+                    },
+                ]
+            },
+            {
+                requiredField: true,
+                labelName: 'Inscrição Estadual',
+                placeholder: 'informe a inscrição estadual',
+                tableFieldName: 'InscricaoEstadual',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 25,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Atividade Estadual',
+                placeholder: 'informe o código da atividade estadual ',
+                tableFieldName: 'CodigoAtividadeEstadual',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 25,
+                fixedValue: null,
+                children: [
+                    {
+                        requiredField: true,
+                        labelName: 'Descrição Atividade Estadual',
+                        placeholder: 'informe a descrição da atividade estadual ',
+                        tableFieldName: 'DescricaoAtividadeEstadualEstabelecimento',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 100,
+                        fixedValue: null,
+                    },
+                ]
+            },
+            {
+                requiredField: true,
+                labelName: 'Inscrição Municipal',
+                placeholder: 'informe a inscrição municipal',
+                tableFieldName: 'InscricaoMunicipal',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 25,
+                fixedValue: null,
+                children: [
+                    {
+                        requiredField: true,
+                        labelName: 'Atividade Municipal',
+                        placeholder: 'Informe o código da Atividade Municipal ',
+                        tableFieldName: 'CodigoAtividadeMunicipal',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 25,
+                        fixedValue: null,
+                    },
+                ]
+            },
+            {
+                requiredField: true,
+                labelName: 'Inscrição Imobiliária',
+                placeholder: 'informe a inscrição imobiliária',
+                tableFieldName: 'InscricaoMobiliaria',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 19,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Espécie Estabelecimento',
+                placeholder: '',
+                tableFieldName: 'EspecieEstabelecimento',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 30,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Banco Central',
+                placeholder: 'informe o número da incrição do Banco Central',
+                tableFieldName: 'InscricaoBancoCentral',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 20,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'SUSEP',
+                placeholder: 'informe o número da incrição do SUSEP',
+                tableFieldName: 'InscricaoSusep',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 20,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Atividade Municipal',
+                placeholder: 'informe a descrição da atividade municipal',
+                tableFieldName: 'DescricaoAtividadeMunicipalEstabelecimento',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 100,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'CVM',
+                placeholder: 'Informe o número da incrição do CVM',
+                tableFieldName: 'InscricaoCvm',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 20,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Tabela do Feriado',
+                placeholder: 'informe o código da tabela do feriado',
+                tableFieldName: 'CodigoTabelaFeriado',
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 4,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Valor Nominal das quotas',
+                placeholder: 'informe o valor nominal das quotas',
+                tableFieldName: 'ValorNominalCotas',
+                typeImput: 'moeda',
+                typeDataImputReturn: 'float',
+                numberOfCharacters: 16,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Valor do Capital Social ',
+                placeholder: 'informe o valor do capital social ',
+                tableFieldName: 'CapitalSocial',
+                typeImput: 'moeda',
+                typeDataImputReturn: 'float',
+                numberOfCharacters: 16,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Empresa é de Grande Porte?',
+                placeholder: 'Informe o tipo do Porte da Empresa',
+                tableFieldName: 'PorteEmpresa',
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                optionsImput: SimNão,
+                numberOfCharacters: 5,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Auditor',
+                placeholder: 'informe o nome do auditor',
+                tableFieldName: 'NomeAuditor',
+                typeImput: 'text',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 100,
+                fixedValue: null,
+                children: [
+                    {
+                        requiredField: true,
+                        labelName: 'CVM Auditor',
+                        placeholder: 'informe o CVM do auditor',
+                        tableFieldName: 'CvmAuditor',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 50,
+                        fixedValue: null,
+                    },
+                    {
+                        requiredField: true,
+                        labelName: 'Inscrição Federal Auditor',
+                        placeholder: 'informe a inscrição federal do auditor',
+                        tableFieldName: 'InscricaoFederalAuditor',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        mask: ['00.000.000/0001-00'],
+                        numberOfCharacters: 18,
+                        fixedValue: null,
+                    },
+                ]
+            },
+            {
+                requiredField: true,
+                labelName: 'Categoria de Empresas e Clientes',
+                placeholder: 'informe o código da categoria de empresas e clientes',
+                tableFieldName: 'CodigoCategoriaEmpresaCliente',
+                typeImput: 'number',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+            {
+                requiredField: true,
+                labelName: 'Tipo de Alteração',
+                placeholder: 'informe o tipo de alteração',
+                tableFieldName: 'TipoAlteracaoESocial',
+                typeImput: 'select',
+                typeDataImputReturn: 'integer',
+                optionsImput: TipoAlteracaoESocial,
+                numberOfCharacters: 3,
+                fixedValue: null,
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'Certificado',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 4000,
+                fixedValue: ''
+            },
+            {
+                requiredField: false,
+                tableFieldName: 'StatusSincZen',
+                typeDataImputReturn: 'integer',
+                numberOfCharacters: 5,
+                fixedValue: 0,
+            },
+            {
+                requiredField: true,
+                labelName: 'Histórico',
+                placeholder: 'informe a data do histórico',
+                tableFieldName: 'DataHistorico',
+                typeImput: 'date',
+                typeDataImputReturn: 'string',
+                numberOfCharacters: 10,
+                fixedValue: null,
+            },
+        ]
+    }
+]

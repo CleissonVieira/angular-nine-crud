@@ -15,14 +15,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
 
+import { InputComponent } from './components/input/input.component'
+
 import { ModulesComponent } from './views/modules/modules.component';
 import { ModuleBusinessManagerComponent } from './views/module-business-manager/module-business-manager.component';
 import { ModulePayrollComponent } from './views/module-payroll/module-payroll.component';
+
 import { HelpPageComponent } from './views/help-page/help-page.component';
 import { CompaniesComponent } from './views/registration-pages/companies/companies.component';
 import { AdmissionsComponent } from './views/registration-pages/admissions/admissions.component';
@@ -45,6 +49,7 @@ import { VestingPeriodsComponent } from './views/registration-pages/vesting-peri
     TerminationsComponent,
     VacationReceiptComponent,
     VestingPeriodsComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +65,7 @@ import { VestingPeriodsComponent } from './views/registration-pages/vesting-peri
     MatTabsModule,
     MatStepperModule,
     FormsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

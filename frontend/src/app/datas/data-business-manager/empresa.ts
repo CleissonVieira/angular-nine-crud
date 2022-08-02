@@ -1,4 +1,31 @@
-public int CodigoEmpresa { get; set; }
-        public string NomeEmpresa { get; set; }
-        public string CodigoQuestor { get; set; }
-        public string CodigoEmpresaCliente { get; set; }
+import { ITable } from '../DataInterface'
+
+const DataEmpresa: ITable[] = [
+        {
+            titleName: 'Empresa',
+            tableName: 'empresa',
+            children: [
+                {
+                        requiredField: true,
+                        labelName: 'Codigo da Empresa',
+                        placeholder: 'informe o código da empresa',
+                        tableFieldName: 'CodigoEmpresa',
+                        typeImput: 'number',
+                        typeDataImputReturn: 'integer',
+                        numberOfCharacters: 5,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Nome da Empresa',
+                        placeholder: 'informe o nome da empresa',
+                        tableFieldName: 'NomeEmpresa',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 100,
+                        fixedValue: null,
+                }
+            ]
+        }
+]
+

@@ -1,0 +1,16 @@
+Existem campos compartilhados entre tabelas que possuem a mesma finalidade, tamanho e significado
+Entender qual a melhor lógica para aplicar
+Precisamos agilizar o processo do usuário preencher esses dados
+
+Sendo esses:
+
+- DDD de telefone/celular/fax
+- Numero de telefone/celular/fax
+
+- CEP
+- Endereço
+- Número de endereço
+- Bairro
+- País Origem
+- Estado
+- Município

@@ -1,42 +1,393 @@
-public int CodigoContador { get; set; }
-        public DateTime? DataInicial { get; set; }
-        public string NomeContador { get; set; }
-        public string CepEnderecoContador { get; set; }
-        public string CodigoTipoLogradouro { get; set; }
-        public string EnderecoContador { get; set; }
-        public int NumeroEnderecoContador { get; set; }
-        public string ComplementoEnderecoContador { get; set; }
-        public string BairroContador { get; set; }
-        public string SiglaEstado { get; set; }
-        public int CodigoMunicipio { get; set; }
-        public DateTime? DataAlteracaoEndereco { get; set; }
-        public int DddFone { get; set; }
-        public string NumeroFone { get; set; }
-        public string Ramal { get; set; }
-        public int DddFax { get; set; }
-        public string DddCelular { get; set; }
-        public string NumeroCelular { get; set; }
-        public string NumeroFax { get; set; }
-        public string TipoInscricaoFederal { get; set; }
-        public string InscricalFederal { get; set; }
-        public string CpfResponsavelCaepfContador { get; set; }
-        public string TipoCaepfContador { get; set; }
-        public string InscricaoCaepfContador { get; set; }
-        public string NumeroRg { get; set; }
-        public string OrgaoEmissorRg { get; set; }
-        public string SiglaEstadoRg { get; set; }
-        public DateTime? DataRg { get; set; }
-        public bool TransferidoOuSecundario { get; set; }
-        public string NumeroRegistroConselhoContador { get; set; }
-        public string TituloProfissao { get; set; }
-        public int Qualificacao { get; set; }
-        public string EstadoExpedicaoConselhoContador { get; set; }
-        public string NumeroSequenciaConselhoContador { get; set; }
-        public DateTime? DataValidadeCrc { get; set; }
-        public string UsuarioSat { get; set; }
-        public string SenhaSat { get; set; }
-        public string InscricaoMunicipalConselhoContador { get; set; }
-        public string Email { get; set; }
-        public DateTime? DataNascimento { get; set; }
-        public string PaginaInternet { get; set; }
-        public int TipoAlteracaoSocial { get; set; }
+import { ITable } from '../DataInterface'
+
+import { DDD } from '../data-questor/DDD'
+import { OrgaoEmissor } from '../data-questor/OrgaoEmissor'
+import { TipoLogradouro } from '../data-questor/TipoLogradouro'
+import { EstadoMunicipio } from '../data-questor/EstadoMunicipio'
+import { SimNão, TipoInscricaoFederal } from '../data-questor/Options'
+
+const DataContador: ITable[] = [
+        {
+            titleName: 'Contador',
+            tableName: 'contador',
+            children: [
+                {
+                        requiredField: true,
+                        labelName: 'Código do Contador',
+                        placeholder: 'informe o código do contador',
+                        tableFieldName: 'CodigoContador',
+                        typeImput: 'number',
+                        typeDataImputReturn: 'integer',
+                        numberOfCharacters: 5,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'DataInicial',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: '01/01/1900',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Nome',
+                        placeholder: 'informe o nome do contador',
+                        tableFieldName: 'NomeContador',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 50,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'CEP',
+                        placeholder: 'informe o cep do contador',
+                        tableFieldName: 'CepEnderecoContador',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        mask: ['00.000-000'],
+                        numberOfCharacters: 10,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Tipo de Logradouro',
+                        placeholder: 'informe se é rua, avenida, etc.',
+                        tableFieldName: 'CodigoTipoLogradouro',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'integer',
+                        optionsImput: TipoLogradouro,
+                        numberOfCharacters: 21,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Endereço',
+                        placeholder: 'digite o nome da rua',
+                        tableFieldName: 'EnderecoContador',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 40,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Número',
+                        placeholder: 'digite o número do endereço',
+                        tableFieldName: 'NumeroEnderecoContador',
+                        typeImput: 'number',
+                        typeDataImputReturn: 'integer',
+                        numberOfCharacters: 7,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'ComplementoEnderecoContador',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 20,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Bairro',
+                        placeholder: 'digite o nome de seu bairro',
+                        tableFieldName: 'BairroContador',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 30,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Estado',
+                        placeholder: 'informe a sigla do estado',
+                        tableFieldName: 'SiglaEstado',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'string',
+                        optionsImput: EstadoMunicipio,
+                        numberOfCharacters: 2,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Município',
+                        placeholder: 'informe o município',
+                        tableFieldName: 'CodigoMunicipio', 
+                        typeImput: 'select',
+                        typeDataImputReturn: 'integer',
+                        numberOfCharacters: 8,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'DataAlteracaoEndereco',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'DDD Telefone',
+                        placeholder: 'informe o ddd do telefone',
+                        tableFieldName: 'DddFone',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'integer',
+                        optionsImput: DDD,
+                        numberOfCharacters: 5,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Telefone',
+                        placeholder: 'informe o número de telefone',
+                        tableFieldName: 'NumeroFone',
+                        typeImput: 'phone',
+                        typeDataImputReturn: 'integer',
+                        mask: ['00000-0000'],
+                        numberOfCharacters: 10,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'Ramal',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 2,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'DDD Fax',
+                        placeholder: 'digite o DDD',
+                        tableFieldName: 'DddFax',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'integer',
+                        optionsImput: DDD,
+                        numberOfCharacters: 5,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'DddCelular',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 5,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'NumeroCelular',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Fax',
+                        placeholder: 'informe o número do fax',
+                        tableFieldName: 'NumeroFax',
+                        typeImput: 'number',
+                        typeDataImputReturn: 'integer',
+                        numberOfCharacters: 10,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Tipo de Inscrição Federal',
+                        placeholder: 'Informe se Cpf ou Cnpj',
+                        tableFieldName: 'TipoInscricaoFederal',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'integer',
+                        optionsImput: TipoInscricaoFederal,
+                        numberOfCharacters: 2,
+                        fixedValue: null,
+                        children: [
+                                {
+                                        requiredField: true,
+                                        labelName: 'Cadastro: de Pessoa Física / Nacional de Pessoa Jurídica',
+                                        placeholder: 'informe a inscrição federal',
+                                        tableFieldName: 'InscricalFederal',
+                                        typeImput: 'text',
+                                        typeDataImputReturn: 'string',
+                                        mask: ['000.000.000-00', '00.000.000/0001-00'],
+                                        numberOfCharacters: 18,
+                                        fixedValue: null,
+                                },
+                        ]
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'CpfResponsavelCaepfContador',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 14,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'TipoCaepfContador',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'InscricaoCaepfContador',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 14,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'RG',
+                        placeholder: 'informe o número do registro geral do contador',
+                        tableFieldName: 'NumeroRg', 
+                        typeImput: 'number',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 20,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Orgão Emissor RG',
+                        placeholder: 'informe o órgão emissor do registro geral do contador',
+                        tableFieldName: 'OrgaoEmissorRg',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'integer',
+                        optionsImput: OrgaoEmissor,
+                        numberOfCharacters: 6,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Estado Órgão Emissor RG',
+                        placeholder: 'informe a sigla do estado emissor do registro geral',
+                        tableFieldName: 'SiglaEstadoRg',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'string',
+                        optionsImput: EstadoMunicipio,
+                        numberOfCharacters: 2,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'DataRg',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Transferido ou Secundario?',
+                        placeholder: 'Sim ou não',
+                        tableFieldName: 'TransferidoOuSecundario',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'boolean',
+                        optionsImput: SimNão,
+                        numberOfCharacters: 5,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Número de Registro no Conselho do Contador',
+                        placeholder: 'informe o número de registro no conselho',
+                        tableFieldName: 'NumeroRegistroConselhoContador',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 20,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Título Profissional',
+                        placeholder: 'informe o título profissional',
+                        tableFieldName: 'TituloProfissao',
+                        typeImput: 'text',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 30,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'Qualificacao',
+                        typeDataImputReturn: 'integer',
+                        numberOfCharacters: 5,
+                        fixedValue: 203,
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Estado da Federação',
+                        placeholder: 'Informe a sigla do Estado da federação que expediu o CRC',
+                        tableFieldName: 'EstadoExpedicaoConselhoContador',
+                        typeImput: 'select',
+                        typeDataImputReturn: 'string',
+                        optionsImput: EstadoMunicipio,
+                        numberOfCharacters: 2,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: true,
+                        tableFieldName: 'NumeroSequenciaConselhoContador',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 20,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'DataValidadeCrc',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'UsuarioSat',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 50,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'SenhaSat',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 20,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'InscricaoMunicipalConselhoContador',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 25,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: true,
+                        labelName: 'Endereço Eletrônico',
+                        placeholder: 'informe o e-mail',
+                        tableFieldName: 'Email',
+                        typeImput: 'email',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 100,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'DataNascimento',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 10,
+                        fixedValue: null,
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'PaginaInternet',
+                        typeDataImputReturn: 'string',
+                        numberOfCharacters: 100,
+                        fixedValue: '',
+                },
+                {
+                        requiredField: false,
+                        tableFieldName: 'TipoAlteracaoSocial',
+                        typeDataImputReturn: 'integer',
+                        numberOfCharacters: 3,
+                        fixedValue: 0,
+                },
+            ]
+        }
+]
