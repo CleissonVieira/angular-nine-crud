@@ -1,6 +1,6 @@
 import { ITable } from '../DataInterface'
 
-const DataCfgEmpresaGem: ITable[] = [
+export const DataCfgEmpresaGem: ITable = 
         {
                 titleName: 'CfgEmpresaGem',
                 tableName: 'cfgempresagem',
@@ -142,4 +142,3 @@ const DataCfgEmpresaGem: ITable[] = [
                         },
                 ]
         }
-]

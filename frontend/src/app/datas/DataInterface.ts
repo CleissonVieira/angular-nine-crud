@@ -1,4 +1,4 @@
-interface ITableFields {
+export interface ITableFields {
     requiredField: boolean;
     labelName?: string;
     placeholder?: string;
@@ -12,6 +12,7 @@ interface ITableFields {
     numberOfCharacters: number;
     fixedValue: string | number | null; 
     children?: ITableFields[];
+    value?: null;
 }
 
 export interface ITable {

@@ -1,10 +1,9 @@
 import { ITable } from '../DataInterface'
 
-const DataEmpresa: ITable[] = [
-        {
-            titleName: 'Empresa',
-            tableName: 'empresa',
-            children: [
+export const DataEmpresa: ITable = {
+        titleName: 'Empresa',
+        tableName: 'empresa',
+        children: [
                 {
                         requiredField: true,
                         labelName: 'Codigo da Empresa',
@@ -25,7 +24,7 @@ const DataEmpresa: ITable[] = [
                         numberOfCharacters: 100,
                         fixedValue: null,
                 }
-            ]
-        }
-]
+        ]
+}
+
 

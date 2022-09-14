@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModulePayrollComponent implements OnInit {
 
+  
+  //#region [Construtor + ngOnInit]
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
+  //#endregion
 }

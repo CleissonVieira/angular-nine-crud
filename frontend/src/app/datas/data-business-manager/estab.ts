@@ -7,7 +7,7 @@ import {
     TipoAlteracaoESocial, TipoInscricaoFederalCNO 
 } from '../data-questor/Options'
 
-const DataEstabelecimento: ITable[] = [
+export const DataEstabelecimento: ITable = 
     {
         titleName: 'Estabelecimento',
         tableName: 'estab',
@@ -699,4 +699,3 @@ const DataEstabelecimento: ITable[] = [
             },
         ]
     }
-]

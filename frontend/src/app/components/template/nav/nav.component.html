@@ -26,7 +26,7 @@
                 </mat-tree-node>
 
                 <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding >
-                    <a mat-list-item mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                    <a mat-list-item matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
                         <div>
                             <span class="icon-name">
                                 <div (click)="sidnavOpen = !sidnavOpen" class="toggle-nav-child">

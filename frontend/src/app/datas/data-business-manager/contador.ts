@@ -6,7 +6,7 @@ import { TipoLogradouro } from '../data-questor/TipoLogradouro'
 import { EstadoMunicipio } from '../data-questor/EstadoMunicipio'
 import { SimNão, TipoInscricaoFederal } from '../data-questor/Options'
 
-const DataContador: ITable[] = [
+export const DataContador: ITable = 
         {
             titleName: 'Contador',
             tableName: 'contador',
@@ -390,4 +390,3 @@ const DataContador: ITable[] = [
                 },
             ]
         }
-]

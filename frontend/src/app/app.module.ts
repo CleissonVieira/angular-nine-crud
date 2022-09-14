@@ -16,6 +16,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table'  
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -33,6 +35,8 @@ import { AdmissionsComponent } from './views/registration-pages/admissions/admis
 import { TerminationsComponent } from './views/registration-pages/terminations/terminations.component';
 import { VacationReceiptComponent } from './views/registration-pages/vacation-receipt/vacation-receipt.component';
 import { VestingPeriodsComponent } from './views/registration-pages/vesting-periods/vesting-periods.component';
+
+import { LoginPageComponent } from './views/login-page/login-page.component';
  
 @NgModule({
   declarations: [
@@ -50,6 +54,7 @@ import { VestingPeriodsComponent } from './views/registration-pages/vesting-peri
     VacationReceiptComponent,
     VestingPeriodsComponent,
     InputComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +71,8 @@ import { VestingPeriodsComponent } from './views/registration-pages/vesting-peri
     MatStepperModule,
     FormsModule,
     MatButtonModule,
+    MatPaginatorModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

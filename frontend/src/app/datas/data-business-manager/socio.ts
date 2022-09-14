@@ -13,7 +13,7 @@ import { EstadoMunicipio } from './../data-questor/EstadoMunicipio';
 import { MaiorMenorIdade, TipoInscricaoFederal } from '../data-questor/Options'
 import { QualificacaoResponsavel } from './../data-questor/QualificacaoResponsavel';
   
-const DataSocio: ITable[] = [
+export const DataSocio: ITable = 
     {
         titleName: 'Contador',
         tableName: 'contador',
@@ -690,5 +690,5 @@ const DataSocio: ITable[] = [
                 fixedValue: 0,
             },
         ]
-    },
-  ];
+    }
+  

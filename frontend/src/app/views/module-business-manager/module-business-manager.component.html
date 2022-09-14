@@ -3,13 +3,13 @@
         Gerenciador de empresas!
     </mat-card-title>
 
-    <!-- Esse botão vai validar todas as informações obrigatórias
+    <!-- Esse botão vai validar todas as informações obrigatórias  
                 para o gerenciados de empresas, avisar caso existam pendências
                 Caso não houver pendências vai lançar um modal de confirmação
                 Caso usuário confirme que os dados estão ok
                 Os formulários serão bloqueados para novas inserções
             Apenas sob solicitação de liberação será possíve fazer novas inserções -->
-    <button mat-raised-button (click)="formValidateAndSend">
+    <button mat-raised-button (click)="formValidateAndSend()">
         Validar e Enviar!
     </button>
     <mat-card-subtitle class="subtitle">
@@ -21,12 +21,27 @@
         <!-- https://material.angular.io/components/paginator/overview -->  
 
         <mat-tab-group>
-            <mat-tab label="Contador">conteúdo</mat-tab>
-            <mat-tab label="Empresa">conteúdo</mat-tab>
-            <mat-tab label="Estabelecimento">conteúdo</mat-tab>
-            <mat-tab label="Socio">conteúdo</mat-tab>
-            <mat-tab label="CfgeEmpresaGem">conteúdo</mat-tab>
+            <mat-tab label="Empresa">
+                <app-input [inputParams]="inputsEmpresa"></app-input>
+            </mat-tab>
+
+            <mat-tab label="Contador">
+                <app-input [inputParams]="inputsContador"></app-input>
+            </mat-tab>
+
+            <mat-tab label="Estabelecimento">
+                <app-input [inputParams]="inputsEstabelecimento"></app-input>
+            </mat-tab>
+
+            <mat-tab label="Socio">
+                <app-input [inputParams]="inputsSocio"></app-input>
+            </mat-tab>
+
+            <mat-tab label="CfgEmpresaGem">
+                <app-input [inputParams]="inputsCfgEmpresaGem"></app-input>
+            </mat-tab>
         </mat-tab-group>
+
 
     </mat-card-subtitle>
 </mat-card>

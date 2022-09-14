@@ -14,7 +14,13 @@ import { VestingPeriodsComponent } from './views/registration-pages/vesting-peri
 
 import { HelpPageComponent } from './views/help-page/help-page.component';
 
+import { LoginPageComponent } from './views/login-page/login-page.component';
+
 const routes: Routes = [
+  {
+    path: "login",
+    component: LoginPageComponent
+  },
   {
     path: "",
     component: HomeComponent
