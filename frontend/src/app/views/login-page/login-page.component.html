@@ -4,12 +4,12 @@
       <button mat-button color="primary" routerLink="modulos/gerenciador-de-empresas" (click)="SelecionaProduto('PreficicaServico')">
         Serviços Cloud (precificação e visualização de catalogo)
       </button>
-      <button mat-button color="accent" routerLink="modulos/folha-de-pagamento" (click)="SelecionaProduto('CadastroInteligente')">
+      <button mat-button color="accent" routerLink="" (click)="SelecionaProduto('CadastroInteligente')">
         Cadastro Inteligente (administração e inserção de dados)
     </button>
     </div>
 </section>
 
+<!-- Adaptar header e nav conforme produto selecionado ou login realizado -->
 <app-header *ngIf="produto == 'CadastroInteligente'"></app-header>
-
 <app-nav *ngIf="produto == 'CadastroInteligente'"></app-nav>
