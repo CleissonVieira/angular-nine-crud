@@ -1,6 +1,9 @@
+![Certificado](https://raw.githubusercontent.com/CleissonVieira/angular-nine-crud/main/certificate-262343337.jpg)
+
 # Angular 9 - Essencial
 ## [Projeto CRUD](https://www.cod3r.com.br/courses/take/angular-9-essencial/texts/12174481-repositorio-do-projeto)
 
+```Aplicação para iniciar o aprendizado em Angular JS```
 
 ## Rodar localmente:
 
