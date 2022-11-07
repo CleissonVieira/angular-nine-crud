@@ -8,12 +8,12 @@
     {
       "id": 2,
       "name": "Notebook Mac Pro",
-      "price": 12000.89
+      "price": "120.89"
     },
     {
       "id": 3,
-      "name": "Sansung S20+ Ultra",
-      "price": "7520.89"
+      "name": "Sansung S20+ Ultra 5",
+      "price": "2750.89"
     },
     {
       "name": "Lapis Preto Básico",
